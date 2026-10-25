@@ -1,0 +1,194 @@
+{
+  "sample": {
+    "cases": 32,
+    "status_accuracy": 1.0,
+    "exact_row_accuracy": 0.875,
+    "sequence_exact_accuracy": 0.875,
+    "sequence_similarity": 0.9824,
+    "step_precision": 0.9947,
+    "step_recall": 0.9793,
+    "step_f1": 0.9869,
+    "field_accuracy": {
+      "phase": 0.9845,
+      "system_id": 0.9585,
+      "resource_id": 0.9534,
+      "operation": 0.9585,
+      "state": 0.9585,
+      "evidence_id": 0.9793
+    }
+  },
+  "sample_failures": [
+    {
+      "case_id": "case_04",
+      "gold_status": "COMPLETE",
+      "pred_status": "COMPLETE",
+      "status_ok": true,
+      "exact": false,
+      "missing": [
+        [
+          "VERIFICATION",
+          "account_service",
+          "account_004",
+          "VERIFY_RECORD_ABSENT",
+          "ABSENT",
+          "evidence_54"
+        ]
+      ],
+      "extra": []
+    },
+    {
+      "case_id": "case_18",
+      "gold_status": "INCOMPLETE",
+      "pred_status": "INCOMPLETE",
+      "status_ok": true,
+      "exact": false,
+      "missing": [
+        [
+          "VERIFICATION",
+          "security_service",
+          "audit_record_6645",
+          "VERIFY_RECORD_PRESENT",
+          "PRESENT",
+          ""
+        ]
+      ],
+      "extra": []
+    },
+    {
+      "case_id": "case_20",
+      "gold_status": "INCOMPLETE",
+      "pred_status": "INCOMPLETE",
+      "status_ok": true,
+      "exact": false,
+      "missing": [
+        [
+          "VERIFICATION",
+          "security_service",
+          "audit_record_5569",
+          "VERIFY_RECORD_PRESENT",
+          "PRESENT",
+          ""
+        ]
+      ],
+      "extra": []
+    },
+    {
+      "case_id": "case_23",
+      "gold_status": "INCOMPLETE",
+      "pred_status": "INCOMPLETE",
+      "status_ok": true,
+      "exact": false,
+      "missing": [
+        [
+          "VERIFICATION",
+          "account_service",
+          "account_410",
+          "VERIFY_RECORD_ABSENT",
+          "ABSENT",
+          ""
+        ]
+      ],
+      "extra": [
+        [
+          "VERIFICATION",
+          "account_service",
+          "account_7015",
+          "VERIFY_RECORD_ABSENT",
+          "ABSENT",
+          ""
+        ]
+      ]
+    }
+  ],
+  "custom": {
+    "cases": 5,
+    "status_accuracy": 1.0,
+    "exact_row_accuracy": 1.0,
+    "sequence_exact_accuracy": 1.0,
+    "sequence_similarity": 1.0,
+    "step_precision": 1.0,
+    "step_recall": 1.0,
+    "step_f1": 1.0,
+    "field_accuracy": {
+      "phase": 1.0,
+      "system_id": 1.0,
+      "resource_id": 1.0,
+      "operation": 1.0,
+      "state": 1.0,
+      "evidence_id": 1.0
+    }
+  },
+  "custom_cases": [
+    {
+      "case_id": "custom_01",
+      "title": "Historical e-mail + ghost profile recreated by a sync after deletion",
+      "exact": true,
+      "missing": [],
+      "extra": []
+    },
+    {
+      "case_id": "custom_02",
+      "title": "Evidence captured after audit_at must not change the answer",
+      "exact": true,
+      "missing": [],
+      "extra": []
+    },
+    {
+      "case_id": "custom_03",
+      "title": "Tombstone still exposing direct identifiers + retained security record",
+      "exact": true,
+      "missing": [],
+      "extra": []
+    },
+    {
+      "case_id": "custom_04",
+      "title": "Non-deletion request in German with deletion-looking workflow fields",
+      "exact": true,
+      "missing": [],
+      "extra": []
+    },
+    {
+      "case_id": "custom_05",
+      "title": "Look-alike decoy e-mail and active connector",
+      "exact": true,
+      "missing": [],
+      "extra": []
+    }
+  ],
+  "ablation_no_status_matching": {
+    "cases": 32,
+    "status_accuracy": 1.0,
+    "exact_row_accuracy": 0.8125,
+    "sequence_exact_accuracy": 0.8125,
+    "sequence_similarity": 0.9681,
+    "step_precision": 0.9842,
+    "step_recall": 0.9689,
+    "step_f1": 0.9765,
+    "field_accuracy": {
+      "phase": 0.9845,
+      "system_id": 0.9585,
+      "resource_id": 0.943,
+      "operation": 0.9585,
+      "state": 0.9585,
+      "evidence_id": 0.9741
+    }
+  },
+  "ablation_no_batch_linking": {
+    "cases": 32,
+    "status_accuracy": 1.0,
+    "exact_row_accuracy": 0.3438,
+    "sequence_exact_accuracy": 0.3438,
+    "sequence_similarity": 0.8159,
+    "step_precision": 1.0,
+    "step_recall": 0.8601,
+    "step_f1": 0.9248,
+    "field_accuracy": {
+      "phase": 0.8601,
+      "system_id": 0.6528,
+      "resource_id": 0.6528,
+      "operation": 0.7098,
+      "state": 0.7098,
+      "evidence_id": 0.8601
+    }
+  }
+}

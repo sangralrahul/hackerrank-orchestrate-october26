@@ -1,0 +1,8 @@
+{
+  "requests": 518,
+  "seconds": 1.03,
+  "llm_enabled": false,
+  "model": "claude-sonnet-4-5",
+  "rows": [],
+  "llm_errors": 0
+}
